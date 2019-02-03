@@ -1,0 +1,9 @@
+fetch('https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=30d71086d88a41aa910aa2974d774678').then((res) => {
+   return res.json();
+}).then((data) => {
+   data.articles.forEach((article) => {
+       console.log('Content'  + article.content);
+
+
+   })
+})
