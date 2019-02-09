@@ -61,7 +61,7 @@ fetch(url)
     <h1>Michael's Hacker News</h1>
     <script>
     
-    let url = 'http://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=3b32d35e489d47fea03f52a928f034ed';
+    let url = 'https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=3b32d35e489d47fea03f52a928f034ed';
 
     fetch(url)
         .then(r => {

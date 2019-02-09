@@ -1,7 +1,7 @@
 # **Exercises**
 # **Questions**
 
-Extra Questions ... Vocabulary
+Vocabulary
 
 Kanban Board - A tool to organize work broken into columns and cards.
 
@@ -9,102 +9,123 @@ Velocity - How many points a team accomplishes per sprint on average
 
 Sprint - A time-delineated work cycle for a product team.
 
-User Story - A way to frame the work to be done in the format of, "As a_, I want_so that_.
+User Story - A way to frame the work to be done in the format of, "As a____, I want_____so that______.
 
 Card - The smallest complete unit of work.
 
-What are the typical Agile team roles and what parts of the development lifecycle is each role responsible for?
-Why do we use Kanban boards in Agile development?
+## **1. What are the typical Agile team roles and what parts of the development lifecycle is each role responsible for?**
+* **Product Manager** is sometimes known as a **Product Owner**, but these roles may also be distinct. The **PM** is responsible for the strtegy, roadmap, and feature definition of a product or product line.
+* **Project Manager**(**APM**) is responsible for the process management and on-time delivery of one or more product teams.
+* A **Designer** is responsible for the look and feel of a product. They create the product mock-ups, wireframes, and interactions for the product.
+* A **User Researcher** is responsible for understanding the reasons behind the behavior, wants, needs, and priorities of your users. They usually run tests and create **personas**, a profile of a specific type of target user.
+* A **Team Lead** is responsible for the technical management, direction, and quality of one or more projects. A **Team Lead** may serve as an **individual contributor** and/or a manager.
+* A **Developer** is responsible for technical creation, maintenance, and overall integrity of the product.
+
+## **2. Why do we use Kanban boards in Agile development?**
+Agile teams rely on a **Kanban board** to stay organized.  **Kanban boards** visually depict work at various stages of a process using cards to represent work items and columns to represent each state of the process. Cards are moved from the left to right to show progress and to help coordinate teams performing the work. A **Kanban board** may be divided into horizontal "swimlanes" representing different kinds of work or different teams performing the work.  A popular example of a **Kanban board** for **agile** or lean software deveopment consists of Backlog, Ready, Coding, Testing, Aproval, and Done columns. 
+
 Explain velocity and sprint as if you were teaching another student.
-What format makes a good user story?
-What are different estimation methods teams can use? Explain pros and cons of each method. Which method would you prefer?
-Give a real-world example of a development project, and explain the breakdown into epic(s), slices, cards, and tasks.
-Explain in your own words what a dual-track system is and what advantages it provides.
-Choose one of the following projects and write each card that would be in the epic. Estimate each card. What columns would you need to have on your Kanban board?#### **1. Explain the difference between the request/response cycle.**
-The Request/Response cycle is a method computers use to communicate with each other. One computer is requesting some data and the other computer is providing the data relating to the request. Is this the answer they were looking for or is it related to how this cycle is being implemented either asynchronomously or synchronomously.
-#### **2. List common response codes and their groupings.**
+First the definitions of each are as follows:
 
-* **200s** Ok/Success - The request was received and processed by the server successfully.
-* **300s** Redirect - The request was
-* **400s:** The reqestor made a mistake - The most common is "404: Not Found"
-* **500s:** The server made a mistake - The server is down or some code on the server threw an error.
- received and then redirected somewhere else.
+Velocity - How many points a team accomplishes per sprint on average
 
-#### **3. Explain the common HTTP verbs: GET, POST, PATCH, PUT, and DELETE.**
+Sprint - A time-delineated work cycle for a product team. Usually two weeks.
 
-* **GET**
-The most common verb. It is what is used to retrieve a page from a server. This is what occurs by default when you put a URL into the browser or click on a link.
-* **POST**
-This is used to create a nw object on the server.
-* **PATCH**
-This is used to update an existing object on the server.
-* **PUT**
-This is used to replace an existing object on the server. It technically should only be used when sending a complete replacement for an object.
-* **DELETE**
-This is used to delete and object from the server.
+I would explain that Velocity has to do with how much work this team accomplishes in a time-delineated work cycle. How much "on average" does this team accomplish in a Sprint/work cycle.
 
-#### **4. Explain the difference between synchronous and asynchronous code.**
-When you execute something synchornously, you wait for it to finish before moving on to another task. When you execute something asychronously, you can move on to another task before it finishes. Most code run synchronously.
-#### **5. Explain what a JavaScript promise is.**
-Every time you make an asynchronous request, you will get back a promise. A promise is an object that wraps an asynchronous operation and notifies when it's done.
-#### **6. Explain why CORS exists and how we can work around it.**
-CORS stands for Cross-origin resource sharing. This is a mechanism that allows resources on one web page to be requested from a site outside the domain of the original webpage. If all CORS were allowed , your browser could be told by some malicious JavaScript to go download viruses and other bad things. To prevent that, all modern browsers disallow CORS by default. To work within the CORS restrictions, the requests we use will go through a proxy site. The site, `https://cors-anywhere.herokuapp.com/` will call out to our requested site, grab the data, not change it a bit, and return it back to us as it we had directly hit that site.
-#### **7. Create a fetch request in JavaScript.**
-```
-let url = 'http://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=3b32d35e489d47fea03f52a928f034ed';
-    
-fetch(url) 
-// Call the fetch function passing the url of the API as a parameter
-.then(function() {
-    // Your code for handling the data you get from the API
-})
-.catch(function() {
-    // This is where you run code if the server returns any errors
-});
-```
+A Sprint is that time-delineated work cycle usually two weeks in length.
 
-### **8. It is time to build HackerNews from scratch! But you need easy access to an API for a list of all the stories currently there.**
-1. Go to News API and click 'Get API Key' sign up for a free API key. 
-2. Use your API key to create a fetch using this URL: `https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=<YOUR_API_KEY_HERE>` 
-3. Loop through the result data, and for each story on HackerNews, create an `<li>` tag that contains the contents of the story.**
+## **3. What format makes a good user story?**
 
-```
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Michael's Hacker News</title>
-</head>
-<body>
-    <script>
-        let url = 'http://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=3b32d35e489d47fea03f52a928f034ed';
+As a ______(choices are "user", "product owner", or "developer"), I want _____(things like "I want to see all my previous orders, so I can order the products I use frequently and not have to remember each order" or "I want to be able to track the appearance of my specials in front of the customer so that I can make improvements to the website so customers order more weekly specials.") so ___".
+## **What are different estimation methods teams can use? Explain pros and cons of each method. Which method would you prefer?**
 
-fetch(url)
-  .then(r => {
-    return r.json();
-  })
-  .then(data => {
-    let results = data.results; // get the array of results from the data object
-    let recipeList = document.createElement("ul"); // create a new `<li>`
-    let body = document.querySelector("body"); // attach to the `<body>` node of the DOM
-    body.appendChild(recipeList); // append the list to the body
-    results.map(recipe => {
-      // loop through each recipe object in the array of recipes
-      let recipeItem = document.createElement("li"); // create a recipe item `<li>`
-      recipeItem.innerHTML =
-        '<a href="' + recipe.href + '">' + recipe.title + "</a>"; // add the link to each li with each recipe's title as the text and link as the href
-      recipeList.appendChild(recipeItem); // append each recipe to the `<ul>`
-    });
-  })
-  .catch(e => {
-    console.log(`An error occurred: ${e}`);
-  });
+Each team member must keep in mind that we are not assigning a specific amount of time to each card but comparing the complexity and size of work to the other cards.
 
-    </script>
+The real benefit to using cards versus group discussion is that group discussion individuals can influence the decisions of other members of the team ... it is important to take titles and others opinions out of the estimating process. After the initial estimation takes place then a group discussion can happen as to the why a certain value or amount of work was chosen for a card so that the whole team can agree on a estimation for a card. 
 
-</body>
-</html>
-```
+Estimation is not intended to be a "cast in stone" process as things may come up after the fact indicating that this specific cards value will need to be adjusted up or down ... that is not a bad thing and instead a learning experience for future estimate sessions.
+
+One estimation method is through the use of "cards"*. I am not refering to playing cards but cards which have a sequence of numbers like:
+
+0,1,1,2,3,5,8,13,21,34 (Fibonacci Sequence)
+0, 2, 4, 8, 16, 32, 64, 128 (Factors of 2)
+
+Another method is T-Shirt Sizes
+XS, S, M, L, XL - Drawback here is if there is a wide range of time estimates in the cards you are looking at you are limited to only 5 choices so maybe a Fibonacci Sequence or Factors of 2 would be a better choice.
+
+
+By *"cards" I am refering to 
+
+## **4. Give a real-world example of a development project, and explain the breakdown into epic(s), slices, cards, and tasks.**
+
+Epic(s) The project - Add a new registration page.
+
+slices A section of an Epic organized by feature or part of the stack. Usually contains multiple cards. - page front, page behind, client-side scripting, , and api. Another way to slice up the projects is registration form, create new user, on registration fail, and on registration success.
+
+cards The smallest complete unit of work. Example "create a new user"
+
+task A piece of work needed to create a feature. There may be one task for a card or there may be many depending upon the contents of the card.
+Breaks down the card ... example ... create a new user, make it reponsive, add a test.
+
+
+
+## **5. Explain in your own words what a dual-track system is and what advantages it provides.**
+
+The current trend in Agile development is to utilize a dual-track systerm. In thi system, teams work on research and product design **(Discovery)** concurrently(at the same time) as the development**(Delivery)** of a proven product. This system allows for faster delivery of a software product and prevents either group from having dead time while waiting for the other to complete their work.
+
+
+## **6. Choose one of the following projects and write each card that would be in the epic. Estimate each card. What columns would you need to have on your Kanban board?##**
+
+Planning a Vacation
+
+Card 1 - Identify Who is going on vacation (entire family or only certain family members)? - Research Stage 1
+
+Card 2 - How much time is available for vacation? Can the kids get out of school ... can husband get off from work ... - Research Stage 1
+
+Card 3 - How much $$$ is available for vacation this year ... Research Stage Estimate 1
+
+Card 4 - Decide on a Destination: Get family members input about possible destinations solicit top 4 list from each. Have a family meeting to discuss options. Husband and wife will make a decision and move to card 5. Decision Stage. Estimate 2
+
+Card 5 - Budget Approval ... Yes or No
+Will a vacation to destination chosen fit within amount of money available ... If not may have to adjust vacation length to smaller length of time or go back to Card 4 and choose a different destination less expensive. Then go to Card 6. Decision State. Estimate 1
+
+Card 6 - Ticket Purchases
+Reserve Airline Tickets first then if successful reserve hotel rooms.
+Purchase tickets for events (in this case tickets for Walt Disney World) Preparation Stage Estimate 2
+
+Card 7 - Plan what to take / identify needed to purchases 60 days in advance .. Purchase needed items way in advance of trip; Makes lists for family members on what to pack for trip
+Items needed ... suntan lotion, sunglasses, shorts, bathing suits, googles, baseball hats, sandals Preparation Stage Estimate 4
+
+Card 8 - Notifications Needed
+6 months before vacation - Notify work of upcoming vacation
+1 month before - Notify schools of upcoming vacation
+2 weeks before - Notify neighbors of upcoming vacation
+2 weeks before - Notify paper to stop while away
+2 weeks before - Have mail stopped while away
+Preparation Stage ... Estimate 4
+
+Card 9 - Prepare Checklist of Needed Items for Trip
+Tickets; Boarding Passes; Identification; Credit Cards; Hotel Rewards Program Numbers; Clothes and Accessories
+Preparation Stage ... Estimate 2
+
+Card 10 - 5 Days before trip ... everyone pack ... check over every family members suitcases ...Preparation Stage ... Estimate 4
+
+Card 11 - 2 Days before trip ... check in for flight / print boarding passes / order Uber for ride to Airport / Prepare snacks and entertainment items in backpacks (cell phones/chargers/laptops/headphones) Preparation Stage ... Estimate 4
+
+Card 12 - Morning of Trip Verify Uber coming / Get everyone ready / have luggage ready long before Uber arrives. Preparation Stage ... Estimate 1
+
+Columns - Planning Stage; Preparation Stage; 
+
+Project
+Create a Trello board for a Hacker News clone.
+Create user stories for each feature.
+Break the work into slices and epics as needed.
+Estimate your cards.
+Explain what estimation methods you used.
+
+I really didn't understand this project and maybe this is just way over my head ... after spending over 10 hours on this checkpoint I found myself just wanting to quit this checkpoint and move onto something else. My brain is just shutting down on this material. I created a Trello board for a Hacker News Clone and created user stories for each feature. But after that I just give up ...
+
+
 
 

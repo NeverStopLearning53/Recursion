@@ -9,7 +9,7 @@
     <h1>Michael's Hacker News</h1>
     <script>
     
-    let url = 'http://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=3b32d35e489d47fea03f52a928f034ed';
+    let url = 'https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=3b32d35e489d47fea03f52a928f034ed';
 
     fetch(url)
         .then(r => {
@@ -22,7 +22,7 @@
         body.appendChild(articleList); // append the List to the body
         articles.map(article => {
 
-        let articleItem = document.createElement("li"); // create a article item /// name may not be correct .. ask for help
+        let articleItem = document.createElement("li"); // create a article item /// 
         articleItem.innerHTML = 
         '<a href="' + article.url + '">' + article.title + "  " + article.description + "</a>"; // name may not be correct ask for help 
         articleList.appendChild(articleItem); // append each <li> to the <ol>

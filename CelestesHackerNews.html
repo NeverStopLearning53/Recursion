@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Celeste's Hacker News</title>
+</head>
+<body>
+    <script>
+        
+    let url = 'https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=3b32d35e489d47fea03f52a928f034ed';
+
+    fetch(url)
+        .then(r => {
+        return r.json();
+        })
+    .then(data => {
+        let articles = data.articles // get the array of articles from the data object
+        //data.articles.forEach(article) => {
+        let articleList = document.createElement("ul"); // corrected the quotation marks as they were not the quotation marks next to the enter key on the keyboard ...
+        let body = document.querySelector("body"); // corrected the quotation marks as they were not the quotation marks next the enter key on the keyboard ...
+        body.appendChild(articleList); // append the list to the body // question to myself does this work in this position or should this line be positioned before 
+        articles.map(article => { // I did not see this code in the code that you sent me ...
+
+
+
+        let articleItem = document.createElement("li"); // creating a new <li> ... but what about the <ul> (unordered list) that the <li> belongs to ... in the example on page 8 ... comments say create a new <li> but really they are creating a new <ul> ... this was an error in the checkpoint lesson ...
+        
+        articleItem.innerHTML =
+        '<a href="' + article.url + '">' + article.title + "</a>"; // very good ... add the link to each <li>
+     
+    
+     
+        articleList.appendChild(articleItem);
+        });
+    
+        
+        console.log(articles);
+        
+        });
+    </script>
+
+</body>
+</html>
